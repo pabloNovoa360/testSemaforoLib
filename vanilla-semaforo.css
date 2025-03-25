@@ -1,0 +1,989 @@
+/* Base Styles */
+:root {
+  --semaforo-blue: #0078E7;
+  --semaforo-green: #34C759;
+  --semaforo-yellow: #FFCC00;
+  --semaforo-red: #FF3B30;
+  --semaforo-grey: #E5E5EA;
+  --text-primary: #1F2937;
+  --text-secondary: #6B7280;
+  --bg-light: #F9FAFB;
+  --bg-white: #FFFFFF;
+  --border-color: #E5E7EB;
+  --radius: 0.5rem;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--text-primary);
+  line-height: 1.5;
+  background-color: var(--bg-white);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Utility Classes */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(0, 120, 231, 0.1);
+  color: var(--semaforo-blue);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+/* Center text for Recomendaciones and Prácticas sections */
+.recomendaciones-section .section-title,
+.recomendaciones-section .section-description,
+.practicas-section .section-title,
+.practicas-section .section-description,
+.how-it-works-section .section-title,
+.how-it-works-section .section-description {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Button Styles */
+.semaforo-button {
+  background-color: var(--semaforo-blue);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.semaforo-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  filter: brightness(110%);
+}
+
+.semaforo-button:active {
+  transform: translateY(0);
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(to bottom, white, #f7f9fc);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 0.2s forwards;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 0.4s forwards;
+}
+
+.hero-actions {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 0.6s forwards;
+}
+
+/* Property Cards */
+.property-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.property-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  position: relative;
+  border-left-width: 4px;
+}
+
+.property-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.border-green {
+  border-left-color: var(--semaforo-green);
+}
+
+.border-yellow {
+  border-left-color: var(--semaforo-yellow);
+}
+
+.border-red {
+  border-left-color: var(--semaforo-red);
+}
+
+.card-content {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.card-icon {
+  width: 25%;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  margin-right: 1rem;
+}
+
+.card-icon svg {
+  color: #6B7280;
+}
+
+.card-info {
+  width: 75%;
+}
+
+.card-line {
+  height: 0.5rem;
+  background-color: #E5E7EB;
+  border-radius: 0.25rem;
+  width: 66%;
+  margin-bottom: 0.75rem;
+}
+
+.score-dots {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.dot.green {
+  background-color: var(--semaforo-green);
+}
+
+.dot.yellow {
+  background-color: var(--semaforo-yellow);
+}
+
+.dot.red {
+  background-color: var(--semaforo-red);
+}
+
+.dot.grey {
+  background-color: #E5E7EB;
+}
+
+.card-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.card-line-full {
+  height: 0.5rem;
+  background-color: #E5E7EB;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.card-line-partial {
+  height: 0.5rem;
+  background-color: #E5E7EB;
+  border-radius: 0.25rem;
+  width: 75%;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.circle-blue {
+  top: 25%;
+  right: -20px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 120, 231, 0.1);
+}
+
+.circle-green {
+  bottom: 33%;
+  left: -20px;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(52, 199, 89, 0.1);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator svg {
+  color: #9CA3AF;
+  transition: color 0.3s ease;
+}
+
+.scroll-indicator:hover svg {
+  color: var(--semaforo-blue);
+}
+
+/* Tool Section */
+.tool-section {
+  background-color: white;
+  padding: 2rem 0;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.benefit-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.benefit-icon {
+  background-color: rgba(0, 120, 231, 0.05);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.benefit-icon svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--semaforo-blue);
+}
+
+.benefit-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-description {
+  color: var(--text-secondary);
+}
+
+/* How It Works Section */
+.how-it-works-section {
+  background-color: var(--bg-light);
+  padding: 0.5rem 0;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.step {
+  background-color: white;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.step-number {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--semaforo-blue);
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.step-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-description {
+  color: var(--text-secondary);
+}
+
+/* Traffic Light Components */
+.traffic-light-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.traffic-light-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-circle {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.icon-circle.green {
+  background-color: var(--semaforo-green);
+}
+
+.icon-circle.yellow {
+  background-color: var(--semaforo-yellow);
+}
+
+.icon-circle.red {
+  background-color: var(--semaforo-red);
+}
+
+.icon-circle svg {
+  color: white;
+  width: 2rem;
+  height: 2rem;
+}
+
+.icon-label {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+/* Traffic Light Table */
+.traffic-light-table {
+  width: 100%;
+  overflow: auto;
+  margin-top: 3rem;
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.traffic-light-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.traffic-light-table th {
+  background-color: #f9fafb;
+  text-align: left;
+  padding: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.traffic-light-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: top;
+}
+
+.traffic-light-table tr:last-child td {
+  border-bottom: none;
+}
+
+.color-dot {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.color-dot.green {
+  background-color: var(--semaforo-green);
+}
+
+.color-dot.yellow {
+  background-color: var(--semaforo-yellow);
+}
+
+.color-dot.red {
+  background-color: var(--semaforo-red);
+}
+
+.status-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.status-description {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.visibility-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.visibility-badge.green {
+  background-color: rgba(52, 199, 89, 0.1);
+  color: var(--semaforo-green);
+}
+
+.visibility-badge.yellow {
+  background-color: rgba(255, 204, 0, 0.1);
+  color: var(--semaforo-yellow);
+}
+
+.visibility-badge.red {
+  background-color: rgba(255, 59, 48, 0.1);
+  color: var(--semaforo-red);
+}
+
+.requirements-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.requirements-list li {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.requirements-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Recomendaciones Section */
+.recomendaciones-section {
+  background-color: var(--bg-light);
+  padding: 0.5rem 0 2rem;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.recommendation-card {
+  background-color: white;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.recommendation-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: rgba(0, 120, 231, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.recommendation-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--semaforo-blue);
+}
+
+.recommendation-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.recommendation-description {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.recommendations-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/* Prácticas a evitar Section */
+.practicas-section {
+  background-color: var(--bg-white);
+  padding: 0.5rem 0 2rem;
+}
+
+.practicas-container {
+  background-color: #FEF2F2;
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.practica-item {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.practica-item:last-child {
+  margin-bottom: 0;
+}
+
+.practica-icon {
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  background-color: rgba(239, 68, 68, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.practica-icon svg {
+  color: #EF4444;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.practica-content {
+  flex-grow: 1;
+}
+
+.practica-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.practica-description {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.practicas-footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.practicas-footer p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Animation Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Media Queries */
+@media (min-width: 640px) {
+  .section-container {
+    padding: 3rem 1.5rem;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.75rem;
+  }
+  
+  .section-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .traffic-light-icons {
+    gap: 1rem;
+  }
+  
+  .icon-circle {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  
+  .icon-circle svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .icon-label {
+    font-size: 0.875rem;
+  }
+  
+  .traffic-light-table {
+    overflow-x: auto;
+  }
+  
+  .traffic-light-table th,
+  .traffic-light-table td {
+    padding: 0.75rem;
+  }
+  
+  .color-dot {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .status-title {
+    font-size: 0.875rem;
+  }
+  
+  .status-description {
+    font-size: 0.75rem;
+  }
+  
+  .visibility-badge {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .requirements-list {
+    padding-left: 1rem;
+  }
+  
+  .requirements-list li {
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .practicas-container {
+    padding: 1.5rem;
+  }
+  
+  .practica-item {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .practica-icon {
+    margin-bottom: 0.25rem;
+  }
+  
+  .level-card {
+    margin-bottom: 1rem;
+  }
+  
+  .level-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .level-icon svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .desktop-only {
+    display: block;
+  }
+  
+  .mobile-only {
+    display: none;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .steps-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .recommendations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .hero-text {
+    width: 50%;
+  }
+  
+  .hero-cards {
+    width: 50%;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .steps-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .recommendations-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .circle-blue {
+    right: -40px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .circle-green {
+    left: -40px;
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Mobile/Desktop display utilities */
+@media (max-width: 767px) {
+  .desktop-only {
+    display: none;
+  }
+  
+  .mobile-only {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .desktop-only {
+    display: block;
+  }
+  
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* Traffic Light Cards (Mobile) */
+.traffic-light-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.level-card {
+  background-color: white;
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.level-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.level-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.level-icon.green {
+  background-color: var(--semaforo-green);
+}
+
+.level-icon.yellow {
+  background-color: var(--semaforo-yellow);
+}
+
+.level-icon.red {
+  background-color: var(--semaforo-red);
+}
+
+.level-icon svg {
+  color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.level-info {
+  flex-grow: 1;
+}
+
+.level-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-size: 1.125rem;
+}
+
+.level-description {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.level-visibility {
+  margin-bottom: 1rem;
+}
+
+.level-requirements {
+  margin-top: 0.75rem;
+}
+
+.requirements-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+} 

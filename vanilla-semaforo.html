@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semáforo de propiedades</title>
+  <link rel="stylesheet" href="vanilla-semaforo.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="section-container">
+        <div class="hero-content">
+          <div class="hero-text reveal">
+            <span class="badge">Nuevo Sistema</span>
+            <h1 class="hero-title">Semáforo de propiedades</h1>
+            <h2 class="hero-subtitle">Mantén tus propiedades completas y actualizadas</h2>
+            <p class="hero-description">Ahora podrás ver la puntuación que tienen tus publicaciones. Cumpliendo estos requisitos, tu propiedad se mostrará más arriba en los listados.</p>
+            <div class="hero-actions">
+              <button class="semaforo-button">Editar mis propiedades</button>
+            </div>
+          </div>
+          
+          <div class="hero-cards reveal">
+            <div class="property-cards-grid">
+              <!-- Green card -->
+              <div class="property-card border-green">
+                <div class="card-content">
+                  <div class="card-icon">
+                    <i data-feather="home"></i>
+                  </div>
+                  <div class="card-info">
+                    <div class="card-line"></div>
+                    <div class="score-dots">
+                      <div class="dot green"></div>
+                      <div class="dot green"></div>
+                      <div class="dot green"></div>
+                    </div>
+                    <div class="card-lines">
+                      <div class="card-line-full"></div>
+                      <div class="card-line-partial"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Yellow card -->
+              <div class="property-card border-yellow">
+                <div class="card-content">
+                  <div class="card-icon">
+                    <i data-feather="home"></i>
+                  </div>
+                  <div class="card-info">
+                    <div class="card-line"></div>
+                    <div class="score-dots">
+                      <div class="dot yellow"></div>
+                      <div class="dot yellow"></div>
+                      <div class="dot grey"></div>
+                    </div>
+                    <div class="card-lines">
+                      <div class="card-line-full"></div>
+                      <div class="card-line-partial"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Red card -->
+              <div class="property-card border-red">
+                <div class="card-content">
+                  <div class="card-icon">
+                    <i data-feather="home"></i>
+                  </div>
+                  <div class="card-info">
+                    <div class="card-line"></div>
+                    <div class="score-dots">
+                      <div class="dot red"></div>
+                      <div class="dot grey"></div>
+                      <div class="dot grey"></div>
+                    </div>
+                    <div class="card-lines">
+                      <div class="card-line-full"></div>
+                      <div class="card-line-partial"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="circle circle-blue"></div>
+            <div class="circle circle-green"></div>
+          </div>
+        </div>
+        
+        <div class="scroll-indicator">
+          <a href="#tool">
+            <i data-feather="arrow-down"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Tool Section -->
+    <section id="tool" class="tool-section">
+      <div class="section-container">
+        <span class="badge">Maximiza tus resultados</span>
+        <h2 class="section-title">Mejora la visibilidad de tus propiedades</h2>
+        <p class="section-description">Aplicar las recomendaciones del Semáforo no solo mejora tu puntuación, sino que aumenta significativamente las oportunidades de venta o arriendo. Cada punto de mejora se traduce en más visitas y potenciales compradores.</p>
+        
+        <div class="benefits-grid">
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <i data-feather="trending-up"></i>
+            </div>
+            <div class="benefit-content">
+              <h3 class="benefit-title">Mayor visibilidad garantizada</h3>
+              <p class="benefit-description">Las propiedades bien puntuadas aparecen hasta 3 veces más en búsquedas y reciben el doble de consultas.</p>
+            </div>
+          </div>
+          
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <i data-feather="search"></i>
+            </div>
+            <div class="benefit-content">
+              <h3 class="benefit-title">Posicionamiento preferencial</h3>
+              <p class="benefit-description">Al mejorar tu puntuación, tu propiedad recibe ubicación prioritaria en los resultados de búsqueda, aumentando las oportunidades de venta.</p>
+            </div>
+          </div>
+          
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <i data-feather="eye"></i>
+            </div>
+            <div class="benefit-content">
+              <h3 class="benefit-title">Más visitas</h3>
+              <p class="benefit-description">Las propiedades con información completa generan mayor confianza en los usuarios, incrementando las visitas virtuales en un 40% y las presenciales en un 25%.</p>
+            </div>
+          </div>
+          
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <i data-feather="award"></i>
+            </div>
+            <div class="benefit-content">
+              <h3 class="benefit-title">Ventas más rápidas</h3>
+              <p class="benefit-description">Propiedades con puntuación verde se venden o arriendan hasta un 30% más rápido que aquellas con puntuación roja o amarilla.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works-section">
+      <div class="section-container">
+        <h2 class="section-title">¿Cómo funciona?</h2>
+        <p class="section-description">El Semáforo evalúa tus propiedades y les asigna un color según su nivel de información</p>
+        
+        <!-- Traffic light icons -->
+        <div class="traffic-light-icons">
+          <div class="traffic-light-icon">
+            <div class="icon-circle green">
+              <i data-feather="check"></i>
+            </div>
+            <span class="icon-label">Óptimo</span>
+          </div>
+          
+          <div class="traffic-light-icon">
+            <div class="icon-circle yellow">
+              <i data-feather="alert-triangle"></i>
+            </div>
+            <span class="icon-label">Mejorable</span>
+          </div>
+          
+          <div class="traffic-light-icon">
+            <div class="icon-circle red">
+              <i data-feather="x"></i>
+            </div>
+            <span class="icon-label">Deficiente</span>
+          </div>
+        </div>
+        
+        <!-- Traffic light table (desktop) -->
+        <div class="traffic-light-table desktop-only">
+          <table>
+            <thead>
+              <tr>
+                <th>Color</th>
+                <th>Estado</th>
+                <th>Visibilidad</th>
+                <th>Requisitos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="color-dot green"></div>
+                </td>
+                <td>
+                  <div class="status">
+                    <p class="status-title">Óptimo</p>
+                    <p class="status-description">Propiedad completa</p>
+                  </div>
+                </td>
+                <td>
+                  <span class="visibility-badge green">100% Visibilidad</span>
+                </td>
+                <td>
+                  <ul class="requirements-list">
+                    <li>Mínimo 5 fotos de calidad</li>
+                    <li>Descripción detallada</li>
+                    <li>Precios y dimensiones exactas</li>
+                    <li>Localización precisa</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="color-dot yellow"></div>
+                </td>
+                <td>
+                  <div class="status">
+                    <p class="status-title">Mejorable</p>
+                    <p class="status-description">Propiedad incompleta</p>
+                  </div>
+                </td>
+                <td>
+                  <span class="visibility-badge yellow">60% Visibilidad</span>
+                </td>
+                <td>
+                  <ul class="requirements-list">
+                    <li>3-4 fotos</li>
+                    <li>Descripción básica</li>
+                    <li>Precio aproximado</li>
+                    <li>Localización general</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="color-dot red"></div>
+                </td>
+                <td>
+                  <div class="status">
+                    <p class="status-title">Deficiente</p>
+                    <p class="status-description">Propiedad insuficiente</p>
+                  </div>
+                </td>
+                <td>
+                  <span class="visibility-badge red">10% Visibilidad</span>
+                </td>
+                <td>
+                  <ul class="requirements-list">
+                    <li>1-2 fotos o ninguna</li>
+                    <li>Descripción mínima o ausente</li>
+                    <li>Sin precio exacto</li>
+                    <li>Localización imprecisa</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <!-- Traffic light cards (mobile) -->
+        <div class="traffic-light-cards mobile-only">
+          <!-- Card 1: Óptimo -->
+          <div class="level-card">
+            <div class="level-header">
+              <div class="level-icon green">
+                <i data-feather="check"></i>
+              </div>
+              <div class="level-info">
+                <h3 class="level-title">Óptimo</h3>
+                <p class="level-description">Propiedad completa</p>
+              </div>
+            </div>
+            
+            <div class="level-visibility">
+              <span class="visibility-badge green">100% Visibilidad</span>
+            </div>
+            
+            <div class="level-requirements">
+              <h4 class="requirements-title">Requisitos:</h4>
+              <ul class="requirements-list">
+                <li>Mínimo 5 fotos de calidad</li>
+                <li>Descripción detallada</li>
+                <li>Precios y dimensiones exactas</li>
+                <li>Localización precisa</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Card 2: Mejorable -->
+          <div class="level-card">
+            <div class="level-header">
+              <div class="level-icon yellow">
+                <i data-feather="alert-triangle"></i>
+              </div>
+              <div class="level-info">
+                <h3 class="level-title">Mejorable</h3>
+                <p class="level-description">Propiedad incompleta</p>
+              </div>
+            </div>
+            
+            <div class="level-visibility">
+              <span class="visibility-badge yellow">60% Visibilidad</span>
+            </div>
+            
+            <div class="level-requirements">
+              <h4 class="requirements-title">Requisitos:</h4>
+              <ul class="requirements-list">
+                <li>3-4 fotos</li>
+                <li>Descripción básica</li>
+                <li>Precio aproximado</li>
+                <li>Localización general</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Card 3: Deficiente -->
+          <div class="level-card">
+            <div class="level-header">
+              <div class="level-icon red">
+                <i data-feather="x"></i>
+              </div>
+              <div class="level-info">
+                <h3 class="level-title">Deficiente</h3>
+                <p class="level-description">Propiedad insuficiente</p>
+              </div>
+            </div>
+            
+            <div class="level-visibility">
+              <span class="visibility-badge red">10% Visibilidad</span>
+            </div>
+            
+            <div class="level-requirements">
+              <h4 class="requirements-title">Requisitos:</h4>
+              <ul class="requirements-list">
+                <li>1-2 fotos o ninguna</li>
+                <li>Descripción mínima o ausente</li>
+                <li>Sin precio exacto</li>
+                <li>Localización imprecisa</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Recomendaciones Section -->
+    <section id="recomendaciones" class="recomendaciones-section">
+      <div class="section-container">
+        <h2 class="section-title">Recomendaciones</h2>
+        <p class="section-description">Sigue estas recomendaciones para maximizar la visibilidad de tus propiedades y aumentar tus probabilidades de éxito.</p>
+        
+        <div class="recommendations-grid">
+          <!-- Recommendation Card 1 -->
+          <div class="recommendation-card">
+            <div class="recommendation-icon">
+              <i data-feather="camera"></i>
+            </div>
+            <h3 class="recommendation-title">Fotos de calidad</h3>
+            <p class="recommendation-description">Agrega la mayor cantidad de fotos posibles. Asegúrate de mostrar todas las áreas de la propiedad y utilizar buena iluminación.</p>
+          </div>
+          
+          <!-- Recommendation Card 2 -->
+          <div class="recommendation-card">
+            <div class="recommendation-icon">
+              <i data-feather="edit-3"></i>
+            </div>
+            <h3 class="recommendation-title">Título llamativo y conciso</h3>
+            <p class="recommendation-description">Junto con la foto principal es tu carta de presentación. Destaca las características más relevantes de tu propiedad.</p>
+          </div>
+          
+          <!-- Recommendation Card 3 -->
+          <div class="recommendation-card">
+            <div class="recommendation-icon">
+              <i data-feather="file-text"></i>
+            </div>
+            <h3 class="recommendation-title">Descripciones completas</h3>
+            <p class="recommendation-description">Ayuda a tus clientes a saber todos los detalles, mostrándole la información necesaria sobre la propiedad.</p>
+          </div>
+          
+          <!-- Recommendation Card 4 -->
+          <div class="recommendation-card">
+            <div class="recommendation-icon">
+              <i data-feather="grid"></i>
+            </div>
+            <h3 class="recommendation-title">Amenities completos</h3>
+            <p class="recommendation-description">No olvides completar los amenities! Son fundamentales para que los compradores sepan qué ofrece tu propiedad.</p>
+          </div>
+        </div>
+        
+        <div class="recommendations-action">
+          <button class="semaforo-button">Editar mis propiedades</button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Prácticas a evitar Section -->
+    <section id="practicas-evitar" class="practicas-section">
+      <div class="section-container">
+        <h2 class="section-title">Prácticas a evitar</h2>
+        <p class="section-description">Estas prácticas pueden perjudicar seriamente la visibilidad de tus propiedades y afectar tu reputación como vendedor.</p>
+        
+        <div class="practicas-container">
+          <!-- Item 1 -->
+          <div class="practica-item">
+            <div class="practica-icon">
+              <i data-feather="map-pin"></i>
+            </div>
+            <div class="practica-content">
+              <h3 class="practica-title">Ubicaciones falsas</h3>
+              <p class="practica-description">Evita marcar ubicaciones que no corresponden a la realidad. Los compradores valoran la honestidad y se frustran al descubrir que la propiedad no está donde se indicó.</p>
+            </div>
+          </div>
+          
+          <!-- Item 2 -->
+          <div class="practica-item">
+            <div class="practica-icon">
+              <i data-feather="image"></i>
+            </div>
+            <div class="practica-content">
+              <h3 class="practica-title">Fotos de baja calidad o con logos</h3>
+              <p class="practica-description">No utilices imágenes borrosas, muy oscuras o con marcas de agua grandes. Las fotos deben mostrar la propiedad de forma clara y atractiva.</p>
+            </div>
+          </div>
+          
+          <!-- Item 3 -->
+          <div class="practica-item">
+            <div class="practica-icon">
+              <i data-feather="dollar-sign"></i>
+            </div>
+            <div class="practica-content">
+              <h3 class="practica-title">Precios incorrectos u ocultos</h3>
+              <p class="practica-description">Siempre incluye el precio real de la propiedad. Ocultar esta información o mostrar precios engañosos genera desconfianza y reduce las consultas serias.</p>
+            </div>
+          </div>
+          
+          <!-- Item 4 -->
+          <div class="practica-item">
+            <div class="practica-icon">
+              <i data-feather="alert-circle"></i>
+            </div>
+            <div class="practica-content">
+              <h3 class="practica-title">Información incompleta</h3>
+              <p class="practica-description">No omitas detalles importantes como metraje, cantidad de habitaciones o baños. La falta de información básica reduce drásticamente las posibilidades de contacto.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="practicas-footer">
+          <p>Sigue nuestras recomendaciones y evita estas prácticas para maximizar tus oportunidades</p>
+          <button class="semaforo-button">Editar mis propiedades</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="vanilla-semaforo.js"></script>
+</body>
+</html> 
